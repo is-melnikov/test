@@ -20,6 +20,10 @@
     pointer-events: none;
   }
 
+  svg {
+    fill: black;
+  }
+
   @include hover-focus {
     opacity: 0.8;
   }
