@@ -16,50 +16,60 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
       <main>
-        <section class="intro">
+        <section class="feedback">
           <div class="container">
-
+            <div class="feedback__wrapper">
+              <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
+                <h1>Обратная связь</h1>
+                <p>Оставьте ваши контактные данные и мы свяжемся с вами в течение одного рабочего дня</p>
+                <fieldset>
+                  <label class="visually-hidden" for="name">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" required>
+                  <label class="visually-hidden" for="phone">Телефон</label>
+                  <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__" data-js="phone-number" required>
+                </fieldset>
+                <fieldset>
+                  <legend>Выберите удобный способ связи:</legend>
+                  <label class="visually-hidden">
+                    <input class="visually-hidden" type="radio" id="callback" name="radio" value="callback">
+                    <span class="form__mark form__mark--radio"></span>
+                    <span>перезвонить</span>
+                  </label>
+                  <label class="visually-hidden">
+                    <input class="visually-hidden" type="radio" id="write" name="radio" value="write">
+                    <span class="form__mark form__mark--radio"></span>
+                    <span>написать в Telegram</span>
+                  </label>
+                </fieldset>
+                <button class="btn" type="submit">Отправить</button>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="personal-information-agree" value="agree" required>
+                  <span></span>
+                  я согласен с <span>правилами обработки</span> моих персональных данных
+                </label>
+              </form>
+            </div>
+            <div class="feedback__wrapper">
+              <p class="feedback__description">
+                Компания ООО «Тест» с уважением относится к информации личного характера, касающейся посетителей Сайта «lemurteam.ru» и его поддоменов (далее – «Сайт»).
+                Настоящим компания ООО «Тест» (далее – Компания) подтверждает конфиденциальность обработки Ваших данных в соответствии с законодательством Российской Федерации в сфере защиты информации, а также в соответствии с ФЗ «О персональных данных» №152-ФЗ.
+                В качестве пользователя Сайта (далее – «Пользователь») Вы соглашаетесь с предоставлением Ваших данных компании ООО «Тест», для их обработки (совершение любых действий с использованием средств автоматизации или без, в том числе на сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу, обезличивание, блокирование, удаление, уничтожение) Ваших персональных данных, указанных в Заявлении, в целях консультирования, представления информации о продуктах, маркетинговых исследований, проводимых Компанией, а также в целях продвижения на рынке товаров и/или услуг Компании и/или третьих лиц. Вы соглашаетесь с тем, что Компания вправе поручить обработку моих персональных данных третьим лицам.
+                Согласие дается на обработку следующих персональных данных:
+                персональные данные, не являющиеся специальными или биометрическими: номера контактных телефонов; адреса электронной почты; место работы и занимаемая должность;
+                пользовательские данные (сведения о местоположении; тип и версия ОС; тип и версия Браузера; тип устройства и разрешение его экрана; источник откуда пришел на сайт пользователь; с какого сайта или по какой рекламе; язык ОС и Браузера; какие страницы открывает и на какие кнопки нажимает пользователь; ip-адрес).
+                Мы исключаем передачу Ваших данных третьим лицам, кроме компаний, уполномоченных на обслуживание наших клиентов.
+                Вы имеете право запросить и получить информацию о собранных нами сведениях о Вас, потребовать исправления, удаления или блокирования Ваших данных. Если у Вас есть возражения против обработки Ваших данных, в любой момент Вы можете аннулировать Ваше согласие по e-mail или письменно по адресу: Тест
+                Настоящая Политика конфиденциальности применяется только к сайту «test.ru». Сайт не контролирует и не несет ответственность за сайты третьих лиц, на которые Вы может перейти по ссылкам, доступным на Сайте.
+                Мы не проверяем достоверность персональных данных, предоставляемых Пользователем Сайта.
+                Настоящая Политика может быть изменена или прекращена нами в одностороннем порядке без предварительного уведомления Пользователя. Новая редакция Политики вступает в силу с момента ее размещения на Сайте, если иное не предусмотрено новой редакцией Политики.
+                Действующая редакция Политики находится на Сайте в сети Интернет по адресу http://test.ru/privacy-policy.html.
+              </p>
+            </div>
           </div>
         </section>
       </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
     </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
