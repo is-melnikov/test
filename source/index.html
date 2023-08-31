@@ -19,21 +19,25 @@
       <main>
         <section class="feedback">
           <div class="container">
-            <div class="feedback__form">
+            <div class="feedback__form" data-form-validate data-callback="base">
               <form class="form" action="https://echo.htmlacademy.ru" method="post">
                 <h1>Обратная связь</h1>
                 <p>Оставьте ваши контактные данные и мы свяжемся с вами в течение одного рабочего дня</p>
                 <fieldset class="form__wrapper">
-                  <label>
-                    <input type="text" name="name" id="name" placeholder="Имя" required>
-                  </label>
-                  <label>
-                    <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___-__-__" minlength="11" required>
-                  </label>
+                  <div data-validate-type="text" data-limitation="name" data-required>
+                    <label>
+                      <input type="text" name="name" placeholder="Имя">
+                    </label>
+                  </div>
+                  <div data-validate-type="phone" data-required>
+                    <label>
+                      <input type="tel" name="user-phone" placeholder="+7 (___) ___-__-__">
+                    </label>
+                  </div>
                 </fieldset>
                 <fieldset>
                   <legend class="form__legend">Выберите удобный способ связи:</legend>
-                  <div class="form__container">
+                  <div class="form__container" data-validate-type="toggle-group">
                     <label class="form__label">
                       <input class="visually-hidden" type="radio" id="callback" name="radio" value="callback" required>
                       <span class="form__mark form__mark--radio"></span>
@@ -47,17 +51,17 @@
                   </div>
                 </fieldset>
                 <button class="btn" type="submit">Отправить</button>
-                <div class="form__approval">
+                <div class="form__approval" data-validate-type="checkbox">
                   <label class="form__label form__label--checkbox">
                     <input class="visually-hidden" type="checkbox" name="approval" id="approval" required>
                     <span class="form__mark form__mark--checkbox"></span>
                   </label>
-                  <span class="form__personal">я согласен с <span class="form__underline">правилами обработки</span> моих персональных данных</span>
+                  <span class="form__personal">я согласен с <span class="form__btn" tabindex="0">правилами&nbsp;обработки</span> моих персональных данных</span>
                 </div>
               </form>
             </div>
             <div class="feedback__rules">
-              <div class="feedback__description">
+              <div class="feedback__desc">
                 <p>Компания ООО «Тест» с уважением относится к информации личного характера, касающейся посетителей Сайта «lemurteam.ru» и его поддоменов (далее – «Сайт»).</p>
                 <p>Настоящим компания ООО «Тест» (далее – Компания) подтверждает конфиденциальность обработки Ваших данных в соответствии с законодательством Российской Федерации в сфере защиты информации, а также в соответствии с ФЗ «О персональных данных» №152-ФЗ.</p>
                 <p>В качестве пользователя Сайта (далее – «Пользователь») Вы соглашаетесь с предоставлением Ваших данных компании ООО «Тест», для их обработки (совершение любых действий с использованием средств автоматизации или без, в том числе на сбор, запись, систематизацию, накопление, хранение, уточнение, извлечение, использование, передачу, обезличивание, блокирование, удаление, уничтожение) Ваших персональных данных, указанных в Заявлении, в целях консультирования, представления информации о продуктах, маркетинговых исследований, проводимых Компанией, а также в целях продвижения на рынке товаров и/или услуг Компании и/или третьих лиц. Вы соглашаетесь с тем, что Компания вправе поручить обработку моих персональных данных третьим лицам.</p>

@@ -25,6 +25,10 @@
     fill: black;
   }
 
+  &:focus-within {
+    outline: 2px solid rgba($color-nobel, 0.3);
+  }
+
   @include hover-focus {
     background-color: $color-speech-red;
   }
